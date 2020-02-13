@@ -50,7 +50,7 @@ let reduceHeart = () =>
     {
         heart = setInterval(() => {
 
-            if(parseInt(heart.style.fontSize) > 100)
+            if(parseInt(heart.style.fontSize) > 200)
             {
                 clearInterval(heart);
                 heart.classList.add('heart-out');
