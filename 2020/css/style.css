@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=latin-ext');
+
+:root
+{
+    --main-color: #D51D48;
+    --low-color: #F24463;
+    --second-color: #F3D3C3;
+    --bg-color: #FAEDE7;
+}
+
+html
+{
+
+}
+
+body
+{
+    background: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header
+{
+    position: relative;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    color: var(--main-color);
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.fa-heart
+{
+    font-size: 50px;
+    transition: font-size .2s ease-in-out;
+}
+
+.heart-out
+{
+    font-size: 5000px !important;
+}
+
+.heart
+{
+    position: relative;
+    z-index: 4;
+}
+
+.instruction
+{
+    position: absolute;
+    width: 500px;
+    z-index: 4;
+    bottom: 5px;
+    left: calc(50% - 250px);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.header-text
+{
+    font-size: 50px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 5;
+    color: var(--bg-color);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.get-down
+{
+    position: absolute;
+    bottom: 10px;
+    z-index: 5;
+    color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 13px;
+    transition: opacity .3s ease-in-out;
+    font-family: 'PT Sans', sans-serif;
+    animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+.get-down p
+{
+    margin-bottom: 5px;
+}
+
+.visible
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+.img-svg
+{
+    max-width: 500px;
+}
+
+main
+{
+    position: relative;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 100;
+    font-size: 1.5em;
+    color: var(--main-color);
+    margin: 0px 25px;
+    overflow: hidden;
+}
+
+.date
+{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--bg-color);
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.date-container
+{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.date-container p
+{
+    padding: 10px;
+    position: relative;
+    background: var(--main-color);
+    width: 300px;
+    height: 300px;
+    margin: 30px 30px;
+    color: var(--bg-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 10px 10px 0px var(--low-color);
+    transition: box-shadow .2s ease-in-out;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.date-container p:hover
+{
+    box-shadow: 15px 15px 0px var(--low-color);
+}
+
+.date-header
+{
+    color: var(--second-color);
+    font-size: 3em;
+}
+
+.aniversary
+{
+    font-size: 16px;
+    text-align: center;
+    color: var(--low-color);
+}
+
+.aniversary__label
+{
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+@media only screen and (min-width: 950px) {
+    .date-header
+    {
+        color: var(--second-color);
+        font-size: 4em;
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    .date-header
+    {
+        color: var(--second-color);
+        font-size: 2em;
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    .date-header
+    {
+        color: var(--second-color);
+        font-size: 1.5em;
+    }
+
+    .instruction
+    {
+        font-size: 11px;
+    }
+  }
