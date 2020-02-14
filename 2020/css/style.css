@@ -6,6 +6,8 @@
     --low-color: #F24463;
     --second-color: #F3D3C3;
     --bg-color: #FAEDE7;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 html
